@@ -13,7 +13,7 @@
         android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hello"
+        android:hint="Search"
         app:endIconDrawable="@drawable/search"
         app:endIconMode="custom">
 
@@ -25,7 +25,9 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/techs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </LinearLayout>
