@@ -3,6 +3,8 @@
     <color name="primary_color">#0B132B</color>
     <color name="secondary_color">#1C2541</color>
     <color name="tertiary_color">#3A506B</color>
-    <color name="black_color">#FF000000</color>
-    <color name="white_color">#FFFFFFFF</color>
+    <color name="quaternary_color">#3A506B</color>
+    <color name="black_color">#000000</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="dark_color">#303030</color>
 </resources>
