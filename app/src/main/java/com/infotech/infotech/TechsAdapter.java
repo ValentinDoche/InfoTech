@@ -9,16 +9,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> {
 
-    String data1[], data2[];
+    List<String> techValueName, techValueType, techValueDescription, techValueImg;
     Context context;
 
-    public TechsAdapter(Context ct, String s1[], String s2[]){
+    public TechsAdapter(Context ct, List<String> name,  List<String> type,  List<String> description,  List<String> img){
         context = ct;
-        data1 = s1;
-        data2 = s2;
-
+        techValueName = name;
+        techValueType = type;
+        techValueDescription = description;
+        techValueImg = img;
     }
 
     @NonNull
@@ -31,13 +34,13 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.techName.setText(data1[position]);
-        holder.techDescription.setText(data2[position]);
+        holder.techName.setText(techValueName.get(position));
+        holder.techDescription.setText(techValueDescription.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return techValueName.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
