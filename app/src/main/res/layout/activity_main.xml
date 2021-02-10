@@ -15,7 +15,9 @@
         android:layout_height="wrap_content"
         android:hint="Search"
         app:endIconDrawable="@drawable/search"
-        app:endIconMode="custom">
+        app:endIconMode="custom"
+        android:layout_marginBottom="10dp"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/test"
