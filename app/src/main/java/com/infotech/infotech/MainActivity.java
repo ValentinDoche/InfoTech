@@ -30,5 +30,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(techsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
 }
