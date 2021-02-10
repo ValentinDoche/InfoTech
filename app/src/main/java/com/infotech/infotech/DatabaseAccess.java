@@ -56,9 +56,54 @@ public class DatabaseAccess {
      *
      * @return a List of quotes
      */
-    public List<String> getContent() {
+    public List<String> getName() {
         List<String> list = new ArrayList<>();
-        Cursor cursor = database.rawQuery("SELECT * FROM language", null);
+        Cursor cursor = database.rawQuery("SELECT name FROM language", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+    public List<String> getType() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT type FROM language", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+
+    public List<String> getDescription() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT description FROM language", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+    public List<String> getDescriptionEn() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT descriptionEn FROM language", null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            list.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return list;
+    }
+    public List<String> getImg() {
+        List<String> list = new ArrayList<>();
+        Cursor cursor = database.rawQuery("SELECT img FROM language", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             list.add(cursor.getString(0));
