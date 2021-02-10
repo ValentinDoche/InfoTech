@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768012479419",
+    "project_id": "tech-hackaton",
+    "storage_bucket": "tech-hackaton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768012479419:android:b7213012ad7674fe1db29e",
+        "android_client_info": {
+          "package_name": "com.infotech.infotech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768012479419-m1rd73m071mtjfu4tckds5frbkjr0qtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZMx1C6efTeHE5JmAuTEkecgi80GcP178"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768012479419-m1rd73m071mtjfu4tckds5frbkjr0qtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
