@@ -23,10 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
-        List<String> quotes = databaseAccess.getContent();
+        List<String> name = databaseAccess.getName();
+        List<String> type = databaseAccess.getType();
+        List<String> description = databaseAccess.getDescription();
+        List<String> img = databaseAccess.getImg();
         databaseAccess.close();
 
-        TechsAdapter techsAdapter = new TechsAdapter(this, s1, s2);
+        TechsAdapter techsAdapter = new TechsAdapter(this, name,type,description,img);
         recyclerView.setAdapter(techsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
