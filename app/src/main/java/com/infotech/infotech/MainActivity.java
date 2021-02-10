@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.tech_recycler);
 
-        TechsAdapter techsAdapter = new TechsAdapter(this, s1, s2);
+        DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
+        databaseAccess.open();
+        List<String> name = databaseAccess.getName();
+        List<String> type = databaseAccess.getType();
+        List<String> description = databaseAccess.getDescription();
+        List<String> img = databaseAccess.getImg();
+        databaseAccess.close();
+
+        TechsAdapter techsAdapter = new TechsAdapter(this, name,type,description,img);
         recyclerView.setAdapter(techsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
