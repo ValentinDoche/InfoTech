@@ -45,7 +45,6 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
     private static final String FILENAME = "last-tech";
 
     private Button mButtonLocationSearch;
@@ -54,17 +53,12 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageViewJobs;
     public static String MESSAGE_KEY = "hello";
 
-=======
->>>>>>> f0601917e345e887c83d3bbf97f5b9fd3f217cff
     RecyclerView recyclerView;
 
     String s1[] = {"JAVA", "Python", "Html", "CSS", "Javascript", "Go"};
     String s2[] = {"Descirption JAVA", "Description Python", "Description HTML", "Description CSS", "Description Javascript", "Description Go"};
 
-<<<<<<< HEAD
     @SuppressLint("WrongViewCast")
-=======
->>>>>>> f0601917e345e887c83d3bbf97f5b9fd3f217cff
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         TechsAdapter techsAdapter = new TechsAdapter(this, s1, s2);
         recyclerView.setAdapter(techsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-<<<<<<< HEAD
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.MESSAGE_KEY);
@@ -204,7 +197,5 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Error", err.toString());
         }
         return response;
-=======
->>>>>>> f0601917e345e887c83d3bbf97f5b9fd3f217cff
     }
 }
