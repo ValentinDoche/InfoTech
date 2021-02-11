@@ -1,6 +1,6 @@
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
+*** that would make this better, please fork the InfoTech and create a pull request
 *** or simply open an issue with the tag "enhancement".
 *** Thanks again! Now go create something AMAZING! :D
 ***
@@ -46,7 +46,7 @@
     <br />
     <a href="https://github.com/valentindoche/InfoTech">View Demo</a>
     ·
-    <a href="https://github.com/valentindoche/InfoTech/issues">Report Bug</a>
+    <a href="https://github.com/valentindoche/InfoTech/issues">InfoTechrt Bug</a>
     ·
     <a href="https://github.com/valentindoche/InfoTech/issues">Request Feature</a>
   </p>
@@ -115,7 +115,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Clone the repo
+1. Clone the InfoTech
    ```sh
    git clone https://github.com/valentindoche/InfoTech.git
    ```
@@ -184,15 +184,15 @@ Project Link: [https://github.com/valentindoche/InfoTech](https://github.com/val
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/valentindoche/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/valentindoche/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/valentindoche/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/valentindoche/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/valentindoche/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/valentindoche/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/valentindoche/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/valentindoche/repo/issues
-[license-shield]: https://img.shields.io/github/license/valentindoche/repo.svg?style=for-the-badge
-[license-url]: https://github.com/valentindoche/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/valentindoche/InfoTech.svg?style=for-the-badge
+[contributors-url]: https://github.com/valentindoche/InfoTech/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/valentindoche/InfoTech.svg?style=for-the-badge
+[forks-url]: https://github.com/valentindoche/InfoTech/network/members
+[stars-shield]: https://img.shields.io/github/stars/valentindoche/InfoTech.svg?style=for-the-badge
+[stars-url]: https://github.com/valentindoche/InfoTech/stargazers
+[issues-shield]: https://img.shields.io/github/issues/valentindoche/InfoTech.svg?style=for-the-badge
+[issues-url]: https://github.com/valentindoche/InfoTech/issues
+[license-shield]: https://img.shields.io/github/license/valentindoche/InfoTech.svg?style=for-the-badge
+[license-url]: https://github.com/valentindoche/InfoTech/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/valentindoche
