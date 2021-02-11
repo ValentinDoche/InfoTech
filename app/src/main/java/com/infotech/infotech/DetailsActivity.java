@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,7 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
     TextView detailDesc;
 
     String name, description, jobsCount;
-    int image;
+    Bitmap image;
 
     List<String> opporName, opporType, opporDesc, opporLocation, opporURL;
 
@@ -92,7 +93,7 @@ public class DetailsActivity extends AppCompatActivity {
 
             name = getIntent().getStringExtra("name");
             description = getIntent().getStringExtra("description");
-            image = getIntent().getIntExtra("image", 1);
+            image = (Bitmap) getIntent().getParcelableExtra("image");
             jobsCount = getIntent().getStringExtra("jobsCount");
 
         }else {
@@ -102,7 +103,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void setData(){
         detailDesc.setText(description);
-        detailImage.setImageResource(image);
+        detailImage.setImageBitmap(image);
         setTitle(name);
     }
 
