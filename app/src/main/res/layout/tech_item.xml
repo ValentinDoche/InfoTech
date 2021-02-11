@@ -59,6 +59,7 @@
                         app:chipEndPadding="2dp"
                         android:layout_marginRight="5dp"
                         android:checkable = 'false'
+                        app:chipBackgroundColor="@color/quaternary_color"
                         />
                 </LinearLayout>
                 <HorizontalScrollView
