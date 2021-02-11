@@ -33,7 +33,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/valentindoche/InfoTech">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src=".github/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">InfoTech</h3>
@@ -46,7 +46,7 @@
     <br />
     <a href="https://github.com/valentindoche/InfoTech">View Demo</a>
     ·
-    <a href="https://github.com/valentindoche/InfoTech/issues">InfoTechrt Bug</a>
+    <a href="https://github.com/valentindoche/InfoTech/issues">InfoTech Bug</a>
     ·
     <a href="https://github.com/valentindoche/InfoTech/issues">Request Feature</a>
   </p>
