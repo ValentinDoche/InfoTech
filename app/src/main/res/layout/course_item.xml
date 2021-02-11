@@ -38,6 +38,7 @@
                         android:id="@+id/course_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratmedium"
                         android:text="Open Classrooom"
                         android:textSize="16sp"
                         android:textStyle="bold"
