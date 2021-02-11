@@ -19,9 +19,9 @@ public class DetailsActivity extends AppCompatActivity {
     int image;
 
 
-    final String[] Title = {"Open Classroom", "Udemy", "Skilleos", "oclock", "sololearn", "Coursera", "Codecademy", "Matha", "Udacity"};
-    final String[] Price = {"5 290 €", "2 288 €", "240 €", "6500 €", "Free", "Free", "216 €", "1500 €", "600 €"};
-    final String[] Description = {
+    final String[] coursesTitle = {"Open Classroom", "Udemy", "Skilleos", "oclock", "sololearn", "Coursera", "Codecademy", "Matha", "Udacity"};
+    final String[] coursesPrice = {"5 290 €", "2 288 €", "240 €", "6500 €", "Free", "Free", "216 €", "1500 €", "600 €"};
+    final String[] coursesDescription = {
             "Devenez qui vous voulez être avec OpenClassrooms. Choisissez votre carrière. Suivez une formation constituée de projets professionnalisants et de séances individuelles avec un mentor dédié chaque semaine. Obtenez un diplôme reconnu par l'état. Enrichissez votre CV avec les programmes en alternance proposés par OpenClassrooms et gagnez un salaire tout en suivant votre formation.",
             "Le choix de cours le plus vaste du monde",
             "Retrouvez le goût d’apprendre, Des milliers de cours interactifs 100% en ligne 24/7 réalisés par les meilleurs Experts et sur tous vos sujets préférés !",
@@ -32,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity {
             "Forme-toi aujourd'hui aux compétences de demain.",
             "Les dernières compétences numériques à portée de main. Découvrez le moyen le plus rapide et le plus efficace d'acquérir une expertise prête à l'emploi pour les carrières de l'avenir."
     };
-    final int[] images = {R.drawable.openclassrooms,R.drawable.udemy,R.drawable.skilleos,R.drawable.oclock,R.drawable.sololearn,R.drawable.coursera,R.drawable.codecademy,R.drawable.matha,R.drawable.udacity};
+    final int[] coursesImages = {R.drawable.openclassrooms,R.drawable.udemy,R.drawable.skilleos,R.drawable.oclock,R.drawable.sololearn,R.drawable.coursera,R.drawable.codecademy,R.drawable.matha,R.drawable.udacity};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,11 @@ public class DetailsActivity extends AppCompatActivity {
         opporView = findViewById(R.id.oppor_recycler);
         courseView = findViewById(R.id.courses_recycler);
 
-        OpportunitiesAdapter opportunitiesAdapter = new OpportunitiesAdapter(this, Title);
+        OpportunitiesAdapter opportunitiesAdapter = new OpportunitiesAdapter(this, coursesTitle);
         opporView.setAdapter(opportunitiesAdapter);
         opporView.setLayoutManager(new LinearLayoutManager(this));
 
-        CoursesAdapter coursesAdapter = new CoursesAdapter(this, Title);
+        CoursesAdapter coursesAdapter = new CoursesAdapter(this, coursesTitle, coursesPrice, coursesDescription, coursesImages);
         courseView.setAdapter(coursesAdapter);
         courseView.setLayoutManager(new LinearLayoutManager(this));
 
