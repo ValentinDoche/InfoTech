@@ -59,7 +59,7 @@
 </details>
 
 
-<p align="center" style="color: #AAA">
+<p align="center" style="font-size: 30px">
 COMING SOON
 </p>
 
