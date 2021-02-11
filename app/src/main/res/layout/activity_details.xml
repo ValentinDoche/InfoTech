@@ -39,6 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratmedium"
                 android:text="@string/courses"
                 android:layout_marginTop="20dp"
                 android:textSize="24sp"
@@ -75,9 +76,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:fontFamily="@font/montserratmedium"
                 android:text="@string/opportunities"
+                android:textColor="@color/white_color"
                 android:textSize="18sp"
+                android:layout_weight="1"
                 android:gravity="center"/>
 
         </LinearLayout>

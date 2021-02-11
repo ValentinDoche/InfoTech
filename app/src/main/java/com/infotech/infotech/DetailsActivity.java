@@ -38,13 +38,25 @@ public class DetailsActivity extends AppCompatActivity {
     List<String> opporName, opporType, opporDesc, opporLocation, opporURL;
 
 
-    final String[] s1 = {"Open Classroom", "Udemy", "Skilleos", "Other", "Other", "Other", "Other", "Other", "Other"};
+    final String[] coursesTitle = {"Open Classroom", "Udemy", "Skilleos", "oclock", "sololearn", "Coursera", "Codecademy", "Matha", "Udacity"};
+    final String[] coursesPrice = {"5 290 €", "2 288 €", "240 €", "6500 €", "Free", "Free", "216 €", "1500 €", "600 €"};
+    final String[] coursesDescription = {
+            "Devenez qui vous voulez être avec OpenClassrooms. Choisissez votre carrière. Suivez une formation constituée de projets professionnalisants et de séances individuelles avec un mentor dédié chaque semaine. Obtenez un diplôme reconnu par l'état. Enrichissez votre CV avec les programmes en alternance proposés par OpenClassrooms et gagnez un salaire tout en suivant votre formation.",
+            "Le choix de cours le plus vaste du monde",
+            "Retrouvez le goût d’apprendre, Des milliers de cours interactifs 100% en ligne 24/7 réalisés par les meilleurs Experts et sur tous vos sujets préférés !",
+            "mbarquez dans nos salles de classe virtuelles pour apprendre le métier de développeur, entouré de vos camarades de promotion et de vos formateurs. Un seul objectif : faire de vous un développeur web compétent, diplômé et recruté !",
+            "Apprenez à coder gratuitement! Cours interactifs, «sur le pouce» pratique, soutien par les pairs. ",
+            "Développez vos compétences grâce à des cours, des certificats et des diplômes en ligne proposés par les meilleures universités et entreprises au monde.",
+            "Tout d'abord, nous avons inventé le meilleur système pour apprendre à coder. Neuf ans et 50 millions d'apprenants plus tard, nous l'avons perfectionné.",
+            "Forme-toi aujourd'hui aux compétences de demain.",
+            "Les dernières compétences numériques à portée de main. Découvrez le moyen le plus rapide et le plus efficace d'acquérir une expertise prête à l'emploi pour les carrières de l'avenir."
+    };
+    final int[] coursesImages = {R.drawable.openclassrooms,R.drawable.udemy,R.drawable.skilleos,R.drawable.oclock,R.drawable.sololearn,R.drawable.coursera,R.drawable.codecademy,R.drawable.matha,R.drawable.udacity};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-
 
         detailImage = findViewById(R.id.details_img);
         detailDesc = findViewById(R.id.details_desc);
@@ -102,7 +114,7 @@ public class DetailsActivity extends AppCompatActivity {
         opporView.setAdapter(opportunitiesAdapter);
         opporView.setLayoutManager(new LinearLayoutManager(this));
 
-        coursesAdapter = new CoursesAdapter(this, s1);
+        coursesAdapter = new CoursesAdapter(this, coursesTitle, coursesPrice, coursesDescription, coursesImages);
         courseView.setAdapter(coursesAdapter);
         courseView.setLayoutManager(new LinearLayoutManager(this));
     }

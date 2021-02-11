@@ -14,12 +14,16 @@ import com.google.android.material.chip.Chip;
 
 public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> {
 
-    final String[] data1;
+    final String[] coursesTitle, coursesPrice, coursesDescription;
+    final int[] coursesImages;
     final Context context;
 
-    public CoursesAdapter(Context ct, String[] s1){
+    public CoursesAdapter(Context ct, String[] title, String[] price, String[] description, int[] images){
 
-        data1 = s1;
+        coursesTitle = title;
+        coursesPrice = price;
+        coursesDescription = description;
+        coursesImages = images;
         context = ct;
 
     }
@@ -34,14 +38,15 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.courseName.setText(data1[position]);
-        holder.courseDesc.setText(data1[position]);
-        holder.coursePrice.setText(data1[position]);
+        holder.courseName.setText(coursesTitle[position]);
+        holder.courseDesc.setText(coursesDescription[position]);
+        holder.coursePrice.setText(coursesPrice[position]);
+        holder.courseImg.setImageResource(coursesImages[position]);
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return coursesTitle.length;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
