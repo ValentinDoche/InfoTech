@@ -157,6 +157,7 @@
                     android:id="@+id/tech_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="60"
                     android:text="Blablablabla"
                     android:layout_marginTop="-10dp"/>
             </LinearLayout>
