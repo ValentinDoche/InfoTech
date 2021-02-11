@@ -59,11 +59,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageViewJobs;
     public static String MESSAGE_KEY = "hello";
 
-    RecyclerView recyclerView;
-
-    String s1[] = {"JAVA", "Python", "Html", "CSS", "Javascript", "Go"};
-    String s2[] = {"Descirption JAVA", "Description Python", "Description HTML", "Description CSS", "Description Javascript", "Description Go"};
-
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +80,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView = findViewById(R.id.tech_recycler);
-
-        TechsAdapter techsAdapter = new TechsAdapter(this, s1, s2);
-        recyclerView.setAdapter(techsAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.MESSAGE_KEY);
@@ -138,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     private void getCurrentWeather(String search) {
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://jobs.github.com/positions.json?search="+search+"";
+        String url = "https://jobs.github.com/positions.json?";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
