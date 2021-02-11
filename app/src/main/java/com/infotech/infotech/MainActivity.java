@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         type = databaseAccess.getType();
         description = databaseAccess.getDescription();
         img = databaseAccess.getImg();
-        jobsNumber = new ArrayList<String>();
+        jobsNumber = new ArrayList<>();
         for (String elem: name) {
             jobsNumber.add("Loading...");
         }
@@ -54,16 +55,6 @@ public class MainActivity extends AppCompatActivity {
             getJobsCount(this, i, jobsNumber);
         }
         databaseAccess.close();
-
-
-        ActionBar actionBar = getSupportActionBar();
-        Log.v(Config.LOG_TAG, actionBar != null ? "actionBar not null" : "actionBar null");
-        if (actionBar != null)
-        {
-            actionBar.setHomeButtonEnabled(true);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
 
     }
 
@@ -74,27 +65,15 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ct);
         String url_search = url + name.get(position);
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
-                (Request.Method.GET, url_search, null, new Response.Listener<JSONArray>() {
-
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        if (response.length() == 50){
-                            jobsNumber.set(position, String.format("Offres : +%d",response.length()));
-                        }else {
-                            jobsNumber.set(position, String.format("Offres : %d",response.length()));
-                        }
-                        updateAdapter();
+        @SuppressLint("DefaultLocale") JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
+                (Request.Method.GET, url_search, null, response -> {
+                    if (response.length() == 50){
+                        jobsNumber.set(position, String.format("Offres : +%d",response.length()));
+                    }else {
+                        jobsNumber.set(position, String.format("Offres : %d",response.length()));
                     }
-                }, new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        VolleyError ex = error;
-                        // TODO: Handle error
-
-                    }
-                });
+                    updateAdapter();
+                }, error -> getJobsCount(ct, position, jobsNumber));
 
         requestQueue.add(jsonArrayRequest);
     }
