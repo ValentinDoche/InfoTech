@@ -53,6 +53,7 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
             intent.putExtra("name", techValueName.get(position));
             intent.putExtra("description", techValueDescription.get(position));
             intent.putExtra("image", R.drawable.java);
+            intent.putExtra("jobsCount", techValueJobs.get(position));
             context.startActivity(intent);
         });
 
