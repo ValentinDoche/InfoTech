@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint("DefaultLocale") JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url_search, null, response -> {
                     if (response.length() == 50){
-                        jobsNumber.set(position, String.format("Offres : +%d",response.length()));
+                        jobsNumber.set(position, String.format("+%d",response.length()));
                     }else {
-                        jobsNumber.set(position, String.format("Offres : %d",response.length()));
+                        jobsNumber.set(position, String.format("%d",response.length()));
                     }
                     updateAdapter();
                 }, error -> getJobsCount(ct, position, jobsNumber));
