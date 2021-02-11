@@ -13,10 +13,10 @@ import com.google.android.material.chip.Chip;
 
 public class OpportunitiesAdapter extends RecyclerView.Adapter<OpportunitiesAdapter.ViewHolder> {
 
-    String data1[];
-    Context context;
+    final String[] data1;
+    final Context context;
 
-    public OpportunitiesAdapter(Context ct, String s1[]){
+    public OpportunitiesAdapter(Context ct, String[] s1){
         context = ct;
         data1 = s1;
     }
@@ -42,10 +42,12 @@ public class OpportunitiesAdapter extends RecyclerView.Adapter<OpportunitiesAdap
         return data1.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView opporName, opporDesc, opporLocation;
-        Chip opporType;
+        final TextView opporName;
+        final TextView opporDesc;
+        final TextView opporLocation;
+        final Chip opporType;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 

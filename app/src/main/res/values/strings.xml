@@ -2,4 +2,9 @@
     <string name="app_name">InfoTech</string>
     <string name="courses">Courses</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repudiandae, voluptatum. Accusamus eius eos error illo impedit maiores maxime necessitatibus nobis, numquam quidem quisquam recusandae repudiandae soluta sunt voluptatibus. Maxime!</string>
+    <string name="image_description">Language Description</string>
+    <string name="opportunities">⬆ OPPORTUNITIES ⬆</string>
+    <string name="free">FREE</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="search">Search</string>
 </resources>

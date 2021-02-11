@@ -14,10 +14,10 @@ import com.google.android.material.chip.Chip;
 
 public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> {
 
-    String data1[];
-    Context context;
+    final String[] data1;
+    final Context context;
 
-    public CoursesAdapter(Context ct, String s1[]){
+    public CoursesAdapter(Context ct, String[] s1){
 
         data1 = s1;
         context = ct;
@@ -37,7 +37,6 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
         holder.courseName.setText(data1[position]);
         holder.courseDesc.setText(data1[position]);
         holder.coursePrice.setText(data1[position]);
-        /** holder.courseImg.setText(data1[position]); **/
     }
 
     @Override
@@ -45,11 +44,12 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
         return data1.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView courseName, courseDesc;
-        ImageView courseImg;
-        Chip coursePrice;
+        final TextView courseName;
+        final TextView courseDesc;
+        final ImageView courseImg;
+        final Chip coursePrice;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
