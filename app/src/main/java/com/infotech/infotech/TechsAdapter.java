@@ -52,13 +52,15 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
         holder.techJobs.setText(techValueJobs.get(position));
 
         Bitmap bmp = BitmapFactory.decodeByteArray(techValueImg.get(position),0,techValueImg.get(position).length);
-        holder.techImg.setImageBitmap(Bitmap.createScaledBitmap(bmp, 128, 128,false));
+        bmp = Bitmap.createScaledBitmap(bmp, 128, 128,false);
+        holder.techImg.setImageBitmap(bmp);
 
+        Bitmap finalBmp = bmp;
         holder.techCard.setOnClickListener(view -> {
             Intent intent = new Intent(context, DetailsActivity.class);
             intent.putExtra("name", techValueName.get(position));
             intent.putExtra("description", techValueDescription.get(position));
-            intent.putExtra("image", R.drawable.java);
+            intent.putExtra("image", finalBmp);
             intent.putExtra("jobsCount", techValueJobs.get(position));
             context.startActivity(intent);
         });
