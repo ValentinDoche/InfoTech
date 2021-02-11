@@ -44,6 +44,8 @@
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white_color"
+                    app:chipBackgroundColor="@color/tertiary_color"
                     android:text="Full Time"
                     app:chipMinHeight="18dp"
                     android:textSize="14dp"
