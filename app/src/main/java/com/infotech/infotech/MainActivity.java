@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         description = databaseAccess.getDescription();
         img = databaseAccess.getImg();
         jobsNumber = new ArrayList<>();
-        for (String elem: name) {
+        for (String ignored : name) {
             jobsNumber.add("Loading...");
         }
         initAdapter();
