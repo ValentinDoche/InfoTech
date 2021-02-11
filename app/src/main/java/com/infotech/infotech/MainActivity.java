@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    String url = "https://jobs.github.com/positions.json?description=";
+    final String url = "https://jobs.github.com/positions.json?description=";
 
     public void getJobsCount(Context ct, int position, List<String> jobsNumber) {
 

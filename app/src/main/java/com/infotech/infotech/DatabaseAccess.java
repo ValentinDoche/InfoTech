@@ -9,14 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseAccess {
-    private SQLiteOpenHelper openHelper;
+    private final SQLiteOpenHelper openHelper;
     private SQLiteDatabase database;
     private static DatabaseAccess instance;
 
     /**
      * Private constructor to aboid object creation from outside classes.
      *
-     * @param context
+     * @param context Should be valid context
      */
     private DatabaseAccess(Context context) {
         this.openHelper = new DatabaseOpenHelper(context);

@@ -19,7 +19,7 @@ public class DetailsActivity extends AppCompatActivity {
     int image;
 
 
-    String[] s1 = {"Open Classroom", "Udemy", "Skilleos", "Other", "Other", "Other", "Other", "Other", "Other"};
+    final String[] s1 = {"Open Classroom", "Udemy", "Skilleos", "Other", "Other", "Other", "Other", "Other", "Other"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

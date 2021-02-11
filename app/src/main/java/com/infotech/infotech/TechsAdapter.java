@@ -18,8 +18,12 @@ import java.util.List;
 
 public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> {
 
-    List<String> techValueName, techValueType, techValueDescription, techValueImg, techValueJobs;
-    Context context;
+    final List<String> techValueName;
+    final List<String> techValueType;
+    final List<String> techValueDescription;
+    final List<String> techValueImg;
+    final List<String> techValueJobs;
+    final Context context;
 
     public TechsAdapter(Context ct, List<String> name,  List<String> type,  List<String> description,  List<String> img, List<String> jobs){
         context = ct;
@@ -61,11 +65,11 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView techName;
-        TextView techDescription;
-        Chip techJobs;
-        LinearLayout techItemLayout;
-        MaterialCardView techCard;
+        final TextView techName;
+        final TextView techDescription;
+        final Chip techJobs;
+        final LinearLayout techItemLayout;
+        final MaterialCardView techCard;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
