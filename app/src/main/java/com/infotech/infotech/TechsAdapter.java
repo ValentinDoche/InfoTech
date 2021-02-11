@@ -54,9 +54,6 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
         holder.techJobs.setText("Offers :" + techValueJobs.get(position));
 
         Bitmap bmp = BitmapFactory.decodeByteArray(techValueImg.get(position),0,techValueImg.get(position).length);
-        holder.techImg.setImageBitmap(Bitmap.createScaledBitmap(bmp, 128, 128,false));
-
-        Bitmap bmp = BitmapFactory.decodeByteArray(techValueImg.get(position),0,techValueImg.get(position).length);
         bmp = Bitmap.createScaledBitmap(bmp, 128, 128,false);
         holder.techImg.setImageBitmap(bmp);
 
