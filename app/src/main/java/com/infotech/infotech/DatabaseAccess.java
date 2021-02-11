@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 public class DatabaseAccess {
@@ -101,12 +102,13 @@ public class DatabaseAccess {
         cursor.close();
         return list;
     }
-    public List<String> getImg() {
-        List<String> list = new ArrayList<>();
+    public List<byte[]> getImg() {
+        List<byte[]> list = new ArrayList<>();
         Cursor cursor = database.rawQuery("SELECT img FROM language", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            list.add(cursor.getString(0));
+            String bg = cursor.getString(0);
+            list.add(Base64.getDecoder().decode(cursor.getString(0)));
             cursor.moveToNext();
         }
         cursor.close();

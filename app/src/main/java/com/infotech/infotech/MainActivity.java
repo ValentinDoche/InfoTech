@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     TechsAdapter techsAdapter;
     RecyclerView recyclerView;
-    List<String> name, type, description, img, jobsNumber;
+    List<String> name, type, description, jobsNumber;
+    List<byte[]> img;
 
 
 
