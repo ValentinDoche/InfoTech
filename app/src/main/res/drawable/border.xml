@@ -4,12 +4,12 @@
         android:left="-5dp"
         android:right="-2dp"
         android:top="-5dp">
-        <shape android:shape="rectangle" >
+        <shape android:shape="rectangle">
             <stroke
                 android:width="3dp"
                 android:color="@color/tertiary_color" />
 
-            <solid android:color="#00FFFFFF" />
+            <solid android:color="#EEE" />
 
             <padding
                 android:bottom="3dp" />

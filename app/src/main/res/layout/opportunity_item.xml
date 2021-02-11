@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/oppor_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:cardBackgroundColor="@color/white_color"
+        app:cardBackgroundColor="@color/quaternary_color"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -30,13 +31,13 @@
 
                 <TextView
                     android:id="@+id/oppor_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:text="MonSuperBoulot"
                     android:textSize="17sp"
                     android:fontFamily="@font/montserratmedium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
+                    android:textColor="@color/white_color"
                     />
 
                 <View
@@ -62,6 +63,7 @@
 
             <TextView
                 android:id="@+id/oppor_desc"
+                android:textColor="@color/white_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
@@ -72,10 +74,10 @@
                 android:id="@+id/oppor_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@drawable/pin"
                 android:textStyle="bold"
                 app:endIconMode="custom"
-                android:gravity="end"/>
+                android:gravity="end"
+                app:drawableRightCompat="@drawable/pin" />
 
         </LinearLayout>
 

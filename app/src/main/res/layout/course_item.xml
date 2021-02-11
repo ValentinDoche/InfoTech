@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="15dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/tech_card"
@@ -22,6 +23,7 @@
                 android:id="@+id/course_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/java"
                 android:contentDescription="@string/image_description" />
 
@@ -69,6 +71,7 @@
                     android:id="@+id/course_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="60"
                     android:text="@string/lorem"/>
 
             </LinearLayout>

@@ -1,5 +1,6 @@
 package com.infotech.infotech;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -42,11 +43,12 @@ public class TechsAdapter extends RecyclerView.Adapter<TechsAdapter.ViewHolder> 
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.techName.setText(techValueName.get(position));
         holder.techDescription.setText(techValueDescription.get(position));
-        holder.techJobs.setText(techValueJobs.get(position));
+        holder.techJobs.setText("Offers :" + techValueJobs.get(position));
 
         holder.techCard.setOnClickListener(view -> {
             Intent intent = new Intent(context, DetailsActivity.class);
