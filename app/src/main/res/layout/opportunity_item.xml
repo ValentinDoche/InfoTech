@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="MonSuperBoulot"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:fontFamily="@font/montserratmedium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
@@ -50,13 +50,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:chipBackgroundColor="@color/tertiary_color"
-                    android:text="Full Time"
                     app:chipMinHeight="18dp"
-                    android:textSize="14dp"
+                    android:textSize="14sp"
                     android:textColor="@color/white_color"
                     app:chipStartPadding="2dp"
                     app:chipEndPadding="2dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     />
 
             </LinearLayout>
@@ -66,13 +65,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:maxLength="60"
                 android:text="@string/lorem"/>
 
             <TextView
                 android:id="@+id/oppor_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Jersey "
                 android:drawableRight="@drawable/pin"
                 android:textStyle="bold"
                 app:endIconMode="custom"
