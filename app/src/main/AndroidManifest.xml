@@ -11,12 +11,15 @@
         android:roundIcon="@mipmap/rounded_app"
         android:supportsRtl="false"
         android:theme="@style/Theme.InfoTech"
+
         android:fullBackupContent="@xml/backup_descriptor">
         <activity android:name=".DetailsActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:label="Details Jobs"
             />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
