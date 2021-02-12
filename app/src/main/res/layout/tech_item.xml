@@ -80,34 +80,37 @@
                             style="@style/Widget.MaterialComponents.Chip.Choice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/lorem_ipsum"
+                            android:text="DEV"
                             app:chipBackgroundColor="@color/quaternary_color"
                             app:chipMinHeight="16dp"
                             android:textSize="12sp"
                             app:chipStartPadding="2dp"
                             app:chipEndPadding="2dp"
+                            android:checkable = 'false'
                             />
                         <com.google.android.material.chip.Chip
                             style="@style/Widget.MaterialComponents.Chip.Choice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/lorem_ipsum"
-                            app:chipBackgroundColor="@color/quaternary_color"
+                            android:text="SERVER"
+                            app:chipBackgroundColor="#ADDA7A"
                             app:chipMinHeight="16dp"
                             android:textSize="12sp"
                             app:chipStartPadding="2dp"
                             app:chipEndPadding="2dp"
+                            android:checkable = 'false'
                             />
                         <com.google.android.material.chip.Chip
                             style="@style/Widget.MaterialComponents.Chip.Choice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/lorem_ipsum"
-                            app:chipBackgroundColor="@color/quaternary_color"
+                            android:text="DATA"
+                            app:chipBackgroundColor="#F16262"
                             app:chipMinHeight="16dp"
                             android:textSize="12sp"
                             app:chipStartPadding="2dp"
                             app:chipEndPadding="2dp"
+                            android:checkable = 'false'
                             />
                     </com.google.android.material.chip.ChipGroup>
                 </HorizontalScrollView>
