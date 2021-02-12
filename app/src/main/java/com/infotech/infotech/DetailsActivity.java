@@ -42,15 +42,15 @@ public class DetailsActivity extends AppCompatActivity {
     final String[] coursesTitle = {"Open Classroom", "Udemy", "Skilleos", "oclock", "sololearn", "Coursera", "Codecademy", "Matha", "Udacity"};
     final String[] coursesPrice = {"5 290 €", "2 288 €", "240 €", "6500 €", "Free", "Free", "216 €", "1500 €", "600 €"};
     final String[] coursesDescription = {
-            "Devenez qui vous voulez être avec OpenClassrooms. Choisissez votre carrière. Suivez une formation constituée de projets professionnalisants et de séances individuelles avec un mentor dédié chaque semaine. Obtenez un diplôme reconnu par l'état. Enrichissez votre CV avec les programmes en alternance proposés par OpenClassrooms et gagnez un salaire tout en suivant votre formation.",
-            "Le choix de cours le plus vaste du monde",
-            "Retrouvez le goût d’apprendre, Des milliers de cours interactifs 100% en ligne 24/7 réalisés par les meilleurs Experts et sur tous vos sujets préférés !",
-            "mbarquez dans nos salles de classe virtuelles pour apprendre le métier de développeur, entouré de vos camarades de promotion et de vos formateurs. Un seul objectif : faire de vous un développeur web compétent, diplômé et recruté !",
-            "Apprenez à coder gratuitement! Cours interactifs, «sur le pouce» pratique, soutien par les pairs. ",
-            "Développez vos compétences grâce à des cours, des certificats et des diplômes en ligne proposés par les meilleures universités et entreprises au monde.",
-            "Tout d'abord, nous avons inventé le meilleur système pour apprendre à coder. Neuf ans et 50 millions d'apprenants plus tard, nous l'avons perfectionné.",
-            "Forme-toi aujourd'hui aux compétences de demain.",
-            "Les dernières compétences numériques à portée de main. Découvrez le moyen le plus rapide et le plus efficace d'acquérir une expertise prête à l'emploi pour les carrières de l'avenir."
+            "Become who you want to be with OpenClassrooms. Choose your career. Take a training course consisting of professionalizing projects and one-on-one sessions with a dedicated mentor each week. Earn a state-recognized diploma. Enhance your resume with OpenClassrooms' co-op programs and earn a salary while you train.",
+            "The widest choice of courses in the world",
+            "Find the desire to learn, thousands of 100% interactive courses online 24/7 made by the best Experts and on all your favorite topics!",
+            "Embark on our virtual classrooms to learn the developer's job, surrounded by your classmates and trainers. One goal: make you a competent, qualified and recruited web developer!",
+            "Learn how to code for free! Interactive, hands-on, \"on the go\" courses, peer support. ",
+            "Develop your skills with online courses, certificates and diplomas from the world's top universities and companies.",
+            "First of all, we invented the best system to learn how to code. Nine years and 50 million learners later, we perfected it.",
+            "Train today for the skills of tomorrow.",
+            "The latest digital skills at your fingertips. Discover the fastest and most effective way to acquire ready-to-use expertise for the careers of the future."
     };
     final int[] coursesImages = {R.drawable.openclassrooms,R.drawable.udemy,R.drawable.skilleos,R.drawable.oclock,R.drawable.sololearn,R.drawable.coursera,R.drawable.codecademy,R.drawable.matha,R.drawable.udacity};
 
@@ -138,7 +138,11 @@ public class DetailsActivity extends AppCompatActivity {
                         try {
                             JSONObject jObject = response.getJSONObject(i);
                             opporName.set(i, jObject.getString("title"));
-                            opporDesc.set(i, jObject.getString("description").replace("<p>", ""));
+                            opporDesc.set(i, jObject.getString("description")
+                                    .replace("<p>", "")
+                            .replace("<strong>", "")
+                            .replace("</strong>", "")
+                            .replace("</p>", ""));
                             opporType.set(i, jObject.getString("type"));
                             opporLocation.set(i, jObject.getString("location"));
                             opporURL.set(i, jObject.getString("url"));

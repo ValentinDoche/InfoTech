@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         databaseAccess.open();
         name = databaseAccess.getName();
         type = databaseAccess.getType();
-        description = databaseAccess.getDescription();
+        description = databaseAccess.getDescriptionEn();
         img = databaseAccess.getImg();
         jobsNumber = new ArrayList<>();
         for (String ignored : name) {
